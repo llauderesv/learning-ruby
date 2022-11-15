@@ -117,5 +117,3 @@ message("Vince") {
 
 # Display Hello Vince
 ```
-
-Sample Change
