@@ -16,8 +16,8 @@ end
 
 Sequences.fromtoby(1, 10, 2) { |x| puts x }
 
-def message(name)
+def message?(name)
   yield name
 end
 
-message("Vince") { |message| puts "Hello #{message}" }
+message?("Vince") { |message| puts "Hello #{message}" }

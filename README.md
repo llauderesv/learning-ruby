@@ -2,6 +2,14 @@
 
 Source: [freeCodeCamp](https://www.youtube.com/watch?v=t_ispmWmdjY&t=736s)
 
+Differences with other programming languages.
+
+### Newlines as statement terminators
+Semicolon in Ruby is optional unlike in any other programming languages like C or Java they're required in a statement. But in Ruby, this is optional unless you have a multiple statements in a one line and that would require a semicolon to determine the statement.
+
+### Whitespace dependency
+
+
 ## print 
 
 Use to output / display text in a command line example
@@ -101,6 +109,41 @@ puts ("The sum of two integer is " + (num1 + num2).to_s)
 # Display 3
 ```
 
+## Asterisk (*)
+
+The * operator expects an integer as its righthand operand. 
+It returns a String that repeats the text specified on the lefthand side the number of times specified by the righthand side:
+
+```ruby
+ellipsis = '.'*3 # Evaluates to '...'
+```
+
+## Accessing Characters and Substrings
+
+The most important operator supported by String is the square-bracket array index operator `[]`, which is used for extracting or altering portions of a string. This operator is quite flexible and can be used with a number of different operand types. 
+
+### Ruby 1.8 returns character code in accessing the string characters via index.
+
+```ruby
+s = 'hello';  # Ruby 1.8
+s[0] # 104: the ASCII character code for the first character 'h' 
+s[s.length-1] # 111: the character code 
+s[-1] # of the last character 'o'# 111: another way of accessing the last character
+s[-2] # 108: the second-to-last character
+s[-s.length] # 104: another way of accessing the first character
+s[s.length] # nil: there is no character at that index
+
+```
+
+### Ruby 1.9 returns single character strings rather than character codes
+```ruby
+s = 'hello';        # Ruby 1.9
+s[0]                # 'h': the first character of the string, as a string 
+s[s.length-1]       # 'o': the last character 'o'
+s[-1]               # 'o': another way of accessing the last character
+s[-2]               # 'l': the second-to-last character
+```
+
 ## Yield
 
 Is a values that return inside a block of code
@@ -116,4 +159,34 @@ message("Vince") {
 }
 
 # Display Hello Vince
+```
+
+## Control Flow
+Like in any other programming language, Ruby has also a control flow in programming language.
+
+## If
+Using if in Ruby to check the condition of the value was met or not.
+
+```ruby
+x = 1
+if x < 10 then
+  x = x + 1
+end
+
+puts "The value of x: #{x}"
+
+# Display "The value of x: 2"
+```
+
+
+## File Structure
+
+In writing a Ruby code the file should a shebang to determine that code was ruby language and executed by Ruby programs.
+
+
+```ruby
+#!/usr/bin/ruby -w                            shebang comment coding comment
+# -*- coding: utf-8 -*- require 'socket'      load networking library
+...                                           program code goes here
+__END__ ...                                   mark end of code program data goes here
 ```
