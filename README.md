@@ -1,6 +1,10 @@
-# Learning Ruby Programming Language 💎
+# Journey to Ruby Programming Language 💎
 
-Source: [freeCodeCamp](https://www.youtube.com/watch?v=t_ispmWmdjY&t=736s)
+My learning Journey in the Ruby Programming Language
+
+References: 
+- [freeCodeCamp Course](https://www.youtube.com/watch?v=t_ispmWmdjY&t=736s)
+- [Ebook - The Ruby Programming Language](https://www.oreilly.com/library/view/the-ruby-programming/9780596516178/)
 
 Differences with other programming languages.
 
@@ -190,3 +194,8 @@ In writing a Ruby code the file should a shebang to determine that code was ruby
 ...                                           program code goes here
 __END__ ...                                   mark end of code program data goes here
 ```
+
+
+## Operators
+
+An operator is a token in the Ruby Language that represents an operation (such as addition or comparison) to be performed on one or more operands. The operands are expressions, and operators allow us to combine these operand expressions into larger expressions. 
