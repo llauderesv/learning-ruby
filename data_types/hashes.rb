@@ -18,5 +18,8 @@ sum = numbers["one"] + numbers["two"] # Display values of 3
 
 # The Hash object can created the following syntax.
 numbers = { "one" => 1, "two" => 2, "three" => 3 }
+num = {:one => 1, :two => 2, :three => 3 }
 
 puts numbers["one"]
+
+puts "Accessing has: #{num[:one]}"
