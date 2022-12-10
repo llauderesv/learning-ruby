@@ -132,3 +132,45 @@ puts "All numbers are odd #{odds.to_a}"
 # value and the current value in the item
 sum = (1...10).inject {|sum, x| sum + x }
 puts "The sum of all numbers in array is #{sum}"
+
+array = (1..10)
+array.collect do |x|
+  next 0 if x == nil
+  next x, x*x
+end
+
+
+array.collect do |x| 
+  if x == nil
+    0 
+  else
+    [x, x*x] 
+  end
+end
+
+# Blocks define a new variable scope: variables created within a block exist only within that block
+# and are undefined outside of the block. 
+
+total = 0
+(1..10).each {|x| total += x}
+puts "Total is #{total}"
+
+# In this example you can create a local variable inside the block by defining a semicolon to it.
+# like below in the x is the a block parameter and y is the a block-local variable.
+
+# The point of declaring these block-local variables is to guarantee that 
+# you will not inadvertently clobber the value of some existing variable.
+x = y = 0                # local variables
+1.upto(4) do |x;y|       # x and y are local to block
+  y=x + 1                # x and y "shadow" the outer variables # Use y as a scratch variable
+  puts y*y               # Prints 4, 9, 16, 25
+end
+puts [x,y]               # => [0,0]: block does not alter these
+  
+# Blocks can have more than one parameter and more than one local variable, of course. 
+# Here is a block with two parameters and three local variables:
+
+# hash.each {|key,value; i,j,k| ... }
+  
+  
+  
