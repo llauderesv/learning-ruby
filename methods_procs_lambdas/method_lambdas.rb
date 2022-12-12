@@ -60,6 +60,14 @@ o.printme
 # Which alter the internal state of an object, But this is not always the case; there are many mutators that 
 # do not end with exclamation mark, and a number of nonmutatos that do. Mutating methods (such as Array.fill)
 
+# https://stackoverflow.com/a/612196/5840008
+# In general, methods that end in ! indicate that the method will modify the object it's called on. 
+# Ruby calls these as "dangerous methods" because they change state that someone else might have a reference to. 
+# Here's a simple example for strings:
+foo = "A STRING"  # a string called foo
+foo.downcase!     # modifies foo itself
+puts foo          # prints modified foo
+
 # Methods and Parenthesis
 # Ruby allows parentheses to be omitted from most method invocations. In simple cases, this results in clean-looking code.
 
