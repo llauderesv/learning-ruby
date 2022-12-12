@@ -361,3 +361,23 @@ class WorldGreeter < AbstractGreeter
 end
 
 WorldGreeter.new.greet
+
+
+# Augmenting Behavior by Chaining
+# Sometimes when we override a method, we don't want to replace it altogether, we just want to augment its 
+# behaviour by adding new code. In order todo this, we need a way to invokke the overridden method from the 
+# overriding method. This is known as chaining, and it is accomplished with the keyword super.
+class Point3D < Point 
+  def initialize(x,y,z)
+    super(x,y)
+    @z = z; 
+  end
+
+  def to_s
+  "(#@x, #@y, #@z)" # Variables @x and @y inherited?
+  end 
+end
+
+# The to_s method in Point3D references the @x and @y variables from the superclass Point. 
+# This code works as you probably expect it to:
+Point3D.new(1,2,3).to_s # => "(1, 2, 3)"
